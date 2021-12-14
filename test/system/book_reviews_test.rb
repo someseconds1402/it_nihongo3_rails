@@ -1,6 +1,6 @@
 require "application_system_test_case"
 
-class BookReviewsTest < ApplicationSystemTestCase
+class BookReviewsTest < ApplicationSystemTestCase 
   setup do
     @book_review = book_reviews(:one)
   end
