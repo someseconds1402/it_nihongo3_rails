@@ -1,8 +1,16 @@
-<h1>Profile</h1>
-<h3>Address</h3>
-<p>Email: <%= current_user.email %></p>
-<p>Name: <%= current_user.name %></p>
-<p>Age: <%= current_user.age %></p>
+<h1>プロフィール</h1>
 
-<%= link_to 'Edit', edit_user_path(current_user) %> |
-<%= link_to 'Back', root_path %> 
+<p>
+  <% if @user.avatar.attached? %>
+    <%= image_tag @user.avatar %>
+  <% end %>
+</p>
+
+<h3>名前</h3>
+<%= @user.name %>
+
+<h3>年齢</h3>
+<%= @user.age %>
+
+<h3>メールアドレス</h3>
+<%= @user.email %> 
